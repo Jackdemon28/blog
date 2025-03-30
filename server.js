@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // 连接MongoDB数据库
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/chatoyant-blog', {
+mongoose.connect('mongodb+srv://ytjackdemon:ytjackdemon@jackdemon.aqvtkve.mongodb.net/?retryWrites=true&w=majority&appName=JackDemon', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
