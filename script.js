@@ -1,5 +1,5 @@
 // API配置
-const API_BASE_URL = 'https://blog.chatoyant.top/api';
+const API_BASE_URL = 'http://localhost:3000/api';
 
 // 存储登录token
 let authToken = localStorage.getItem('authToken');
