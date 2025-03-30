@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatoyant的博客</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Chatoyant Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">登录</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#postModal">发布博客</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div id="blogPosts" class="row">
+            <!-- 博客文章将通过JavaScript动态加载 -->
+        </div>
+    </div>
+
+    <!-- 登录模态框 -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">登录</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label class="form-label">用户名</label>
+                            <input type="text" class="form-control" id="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">密码</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">登录</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 发布博客模态框 -->
+    <div class="modal fade" id="postModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">发布博客</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="blogForm">
+                        <div class="mb-3">
+                            <label class="form-label">标题</label>
+                            <input type="text" class="form-control" id="blogTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">内容</label>
+                            <textarea class="form-control" id="blogContent" rows="10" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">发布</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
